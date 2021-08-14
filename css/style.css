@@ -1,0 +1,288 @@
+/*----Font-----*/
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+
+/*----Colors----*/
+:root {
+  --primary: #1a253f;
+  --dark: #151a33;
+  --secondary: #2b55cc;
+  --info: #4d79f6;
+  --ternary: #848db3;
+  --pure: #eff2f9;
+  --fade: #7081b9;
+  --mild: #8997bd;
+  --footer: #212a4a;
+  --black: #060b1b;
+  --twitter: #4ac7ec;
+  --dribbble: #ff5da0;
+  --success: #1ecab8;
+  --danger: #f1646c;
+  --dark-blue: #28365f;
+}
+
+/*-----Rest-----*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  background: var(--dark);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1;
+}
+/*---Utilities-----*/
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.section-heading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--pure);
+  margin-bottom: 4.8rem;
+  text-shadow: 0 0 0.1rem rgba(40, 54, 95, 0.1);
+  position: relative;
+}
+.section-heading::after {
+  content: "";
+  height: 0.3rem;
+  width: 8rem;
+  position: absolute;
+  top: 2.8rem;
+  left: 0;
+  border: 0.1rem dotted var(--danger);
+}
+section {
+  padding: 5rem;
+}
+main {
+  background: var(--primary);
+}
+/*----Nav---*/
+nav {
+  background: var(--primary);
+  padding: 2.4rem 0;
+}
+nav .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .inner .logo {
+  text-transform: uppercase;
+  color: var(--pure);
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+nav .inner .logo i {
+  color: var(--info);
+}
+nav .inner button {
+  background: var(--secondary);
+  border: none;
+  padding: 0.8rem 1.6rem;
+  color: var(--pure);
+  font-size: 1.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*------Main Body-----*/
+section.profile {
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  margin-top: 3.5rem;
+  padding-bottom: 6rem;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 25% 100%, 0 80%);
+}
+/*-------Left----*/
+section.profile .left {
+  flex: 2;
+  display: flex;
+  align-items: center;
+}
+section.profile .left h2 {
+  color: var(--fade);
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+section.profile .left p {
+  color: var(--mild);
+  font-size: 1.4rem;
+}
+section.profile .left img {
+  width: 12.8rem;
+  height: 12.8rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+section.profile .left .avater_block {
+  position: relative;
+  margin-right: 2rem;
+}
+section.profile .left .avater_block span {
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.4px;
+  background: var(--info);
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pure);
+  box-shadow: 0px 0px 20px 0px rgba(32, 41, 54, 0.05);
+  cursor: pointer;
+}
+section.profile .left .cd-headline.loading-bar .cd-words-wrapper::after {
+  background: linear-gradient(to right, var(--secondary), var(--success));
+}
+section.profile .left p b {
+  padding-bottom: 1rem;
+  font-weight: 400;
+}
+/*------Right---*/
+section.profile .right {
+  flex: 1;
+}
+section.profile .right ul.contact {
+  list-style: none;
+  margin-bottom: 2.6rem;
+}
+section.profile .right ul.contact li {
+  color: var(--ternary);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+section.profile .right ul.contact li i {
+  font-size: 1.8rem;
+  margin-right: 0.6rem;
+}
+section.profile .right ul.socials {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+section.profile .right ul.socials li {
+  margin-right: 1.2rem;
+}
+section.profile .right ul.socials li a {
+  display: inline-block;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  color: var(--pure);
+  line-height: 3.2rem;
+  text-align: center;
+}
+section.profile .right ul.socials li:nth-child(1) a {
+  background: var(--secondary);
+}
+section.profile .right ul.socials li:nth-child(2) a {
+  background: var(--twitter);
+}
+section.profile .right ul.socials li:nth-child(3) a {
+  background: var(--dribbble);
+}
+/*----Anout Us---*/
+section.about .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25rem;
+}
+.content h2 {
+  color: var(--info);
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+.content p {
+  color: var(--ternary);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: 0.1px;
+  margin-bottom: 1.6rem;
+}
+.content .left button {
+  background: rgba(77, 121, 246, 0.1);
+  color: var(--info);
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  border: none;
+  line-height: 2.4rem;
+  outline: none;
+  cursor: pointer;
+}
+.content .right p{
+    line-height: 1.6;
+    font-size: 1.4rem;
+    color: var(--ternary);
+    letter-spacing: 0.1px;
+    margin-bottom: 1.6rem;
+}
+.content .right p span:nth-child(1){
+    width: 14rem;
+    float: left;
+    font-weight: 500;
+    padding-right: 1rem;
+    display: block;
+    position: relative;
+}
+.content .right p span:nth-child(2){
+    padding-left: 15rem;
+    display: block;
+}
+.content .right p span:nth-child(1)::after{
+    content: ":";
+    position: absolute;
+    right: 0rem;
+    top: 0;
+}
+/*--Skills--*/
+section.skills .content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+section.skills .content .left{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+section.skills .content .left .heading{
+    margin-bottom: 3.2rem;
+}
+section.skills .content .left .heading i{
+    color: var(--fade);
+    font-size: 5.2rem;
+}
+section.skills .content .left .heading h5{
+    font-size: 1.6rem;
+    margin-top: 0.8rem;
+    color: var(--mild);
+}
+section.skills .content .left p{
+    font-size: 1.4rem;
+    color: var(--ternary);
+    line-height: 1.7;
+}
+section.skills .content .left p.center{
+    color: var(--fade);
+}
